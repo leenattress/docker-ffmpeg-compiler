@@ -89,6 +89,7 @@ RUN cd ~/ffmpeg_sources \
   --enable-libx264 \
   --enable-libx265 \
   --enable-nonfree \
+  --enable-libpulse \
 && PATH="$HOME/bin:$PATH" make -j$(cat /proc/cpuinfo | grep processor | wc -l) \
 && make install \
 && make distclean \
